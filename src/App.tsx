@@ -6,7 +6,7 @@ import { Navbar } from "./components/Navbar";
 import { Pricing } from "./components/Pricing";
 import { ScrollToTop } from "./components/ScrollToTop";
 import { Team } from "./components/Team";
-import landing from "./assets/hero.png";
+import landing from "/public/landing.png";
 import "./App.css";
 
 function App() {
