@@ -6,11 +6,13 @@ import { Navbar } from "./components/Navbar";
 import { Pricing } from "./components/Pricing";
 import { ScrollToTop } from "./components/ScrollToTop";
 import { Team } from "./components/Team";
+import landing from "./assets/hero.png";
 import "./App.css";
 
 function App() {
   return (
     <>
+      <img src={landing} alt={"landing"} className={"hidden"}/>
       <Navbar />
       <Hero />
       {/*<Sponsors />*/}
