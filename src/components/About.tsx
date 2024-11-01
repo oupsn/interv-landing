@@ -1,4 +1,3 @@
-import { Statistics } from "./Statistics";
 import pilot from "../assets/pilot.png";
 
 export const About = () => {
@@ -14,24 +13,20 @@ export const About = () => {
             alt=""
             className="w-[300px] object-contain rounded-lg"
           />
-          <div className="bg-green-0 flex flex-col justify-between">
+          <div className="bg-green-0 flex flex-col justify-center">
             <div className="pb-6">
               <h2 className="text-3xl md:text-4xl font-bold">
+                About{" "}
                 <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-                  About{" "}
+                  Interv
                 </span>
-                Company
               </h2>
               <p className="text-xl text-muted-foreground mt-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
-                amet, consectetur adipiscing elit.
+                Interv is a next-gen platform for video and coding interviews, designed to simplify the hiring process. With tools for coding, video recording, and feedback, Interv helps hiring teams quickly assess both technical and soft skills, ensuring better hiring decisions. Our intuitive platform saves time, reduces bias, and enhances candidate experience, making it the ideal choice for companies of all sizes.
               </p>
             </div>
 
-            <Statistics />
+            {/*<Statistics />*/}
           </div>
         </div>
       </div>
