@@ -46,7 +46,7 @@ frontend_release-image:
   script:
     #- IMAGE_TAG=$(echo "$CI_COMMIT_TIMESTAMP" | sed 's/:/-/g' | sed 's/+/-/g')
     - IMAGE_TAG=${CI_COMMIT_SHORT_SHA}-$(echo "$CI_COMMIT_TIMESTAMP" | sed 's/:/-/g' | sed 's/+/-/g')
-    - CONTAINER_TEST_IMAGE_CLIENTSIDE="$CI_REGISTRY_IMAGE_LANDING:$IMAGE_TAG"
+    - CONTAINER_TEST_IMAGE_LANDING="$CI_REGISTRY_IMAGE_LANDING:$IMAGE_TAG"
     - echo "Building Docker image..."
     - docker build --pull -t "$CONTAINER_TEST_IMAGE_LANDING" .
     - docker push $CONTAINER_TEST_IMAGE_LANDING
