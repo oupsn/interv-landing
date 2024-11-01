@@ -9,6 +9,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Check } from "lucide-react";
+import {cn} from "@/lib/utils.ts";
 
 enum PopularPlanType {
   NO = 0,
@@ -89,15 +90,15 @@ export const Pricing = () => {
       <h3 className="text-xl text-center text-muted-foreground pt-4 pb-8">
         Choose plan that works for you.
       </h3>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="flex flex-wrap lg:flex-nowrap justify-center gap-8">
         {pricingList.map((pricing: PricingProps) => (
           <Card
             key={pricing.title}
-            className={
-              pricing.popular === PopularPlanType.YES
+            className={cn("w-full md:w-[300px] lg:w-auto",
+                pricing.popular === PopularPlanType.YES
                 ? "drop-shadow-xl shadow-black/10 dark:shadow-white/10"
                 : ""
-            }
+            )}
           >
             <CardHeader>
               <CardTitle className="flex item-center justify-between">

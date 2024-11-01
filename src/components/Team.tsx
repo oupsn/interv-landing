@@ -26,7 +26,7 @@ interface SociaNetworkslProps {
 
 const teamList: TeamProps[] = [
   {
-    imageUrl: "",
+    imageUrl: "src/assets/p1.png",
     name: "Phawit Monchaising",
     shortName: "PM",
     position: "Fullstack Developer",
@@ -43,7 +43,7 @@ const teamList: TeamProps[] = [
     ],
   },
   {
-    imageUrl: "",
+    imageUrl: "src/assets/p2.png",
     name: "Phatdanai Shinpanjapol",
     shortName: "PS",
     position: "Fullstack Developer",
@@ -60,7 +60,7 @@ const teamList: TeamProps[] = [
     ],
   },
   {
-    imageUrl: "",
+    imageUrl: "src/assets/p3.png",
     name: "Pasinun Wittayawinit",
     shortName: "PW",
     position: "Fullstack Developer",
@@ -109,7 +109,7 @@ export const Team = () => {
       </h2>
 
       <p className="mt-4 mb-10 text-xl text-muted-foreground">
-
+        All magic starts from here.
       </p>
 
       <div className="flex gap-10 gap-y-10 justify-center flex-wrap">

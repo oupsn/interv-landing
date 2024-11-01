@@ -16,12 +16,12 @@ export const HeroCards = () => {
   return (
     <div className="hidden 2xl:flex flex-row flex-wrap gap-8 relative w-[700px] h-[500px]">
       {/* Testimonial */}
-      <Card className="absolute w-[340px] -top-[10px] drop-shadow-xl shadow-black/10 dark:shadow-white/10">
+      <Card className="absolute w-[340px] -top-[30px] drop-shadow-xl shadow-black/10 dark:shadow-white/10">
         <CardHeader className="flex flex-row items-center gap-4 pb-2">
           <Avatar>
             <AvatarImage
               alt="chet"
-              src="https://static.wixstatic.com/media/835eee_8b310b4221674019a1bf266dc48e117f~mv2_d_3024_4032_s_4_2.jpg/v1/fill/w_260,h_260,q_90/835eee_8b310b4221674019a1bf266dc48e117f~mv2_d_3024_4032_s_4_2.jpg"
+              src="src/assets/c1.png"
             />
             <AvatarFallback>SH</AvatarFallback>
           </Avatar>
@@ -32,14 +32,14 @@ export const HeroCards = () => {
           </div>
         </CardHeader>
 
-        <CardContent>"This interview platform is awesome!"</CardContent>
+        <CardContent>" Meow Meow Meow Meow Meow! " <br/> <span className={"opacity-50"}>(This interview platform is awesome!)</span></CardContent>
       </Card>
 
       {/* Team */}
       <Card className="absolute right-[20px] top-4 w-80 flex flex-col justify-center items-center drop-shadow-xl shadow-black/10 dark:shadow-white/10">
         <CardHeader className="mt-8 flex justify-center items-center pb-2">
           <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmmBG7p_YaBgEGeCLfiJvI14J_yh-hl-4_MNoP8QxJz1xfTF2y0YdzWPQXskHrTO0iLe4&usqp=CAU"
+            src="src/assets/c2.png"
             alt="user avatar"
             className="absolute grayscale-[0%] -top-12 rounded-full w-24 h-24 aspect-square object-cover"
           />
@@ -51,7 +51,7 @@ export const HeroCards = () => {
 
         <CardContent className="text-center pb-2">
           <p>
-            "I really enjoy finding the right talent and building meaningful connections through a seamless interview experience."
+            " Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow " <br/> <span className={"opacity-50"}>(I really enjoy finding the right talent through a seamless interview experience.)</span>
           </p>
         </CardContent>
       </Card>
@@ -102,7 +102,7 @@ export const HeroCards = () => {
       </Card>
 
       {/* Service */}
-      <Card className="absolute w-[350px] -right-[10px] bottom-[50px]  drop-shadow-xl shadow-black/10 dark:shadow-white/10">
+      <Card className="absolute w-[350px] -right-[10px] bottom-[30px]  drop-shadow-xl shadow-black/10 dark:shadow-white/10">
         <CardHeader className="space-y-1 flex md:flex-row justify-start items-start gap-4">
           <div className="mt-1 bg-primary/20 p-1 rounded-2xl">
             <LightBulbIcon />
