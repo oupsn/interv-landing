@@ -1,0 +1,71 @@
+stages:
+  - lint
+  - build
+  - release
+  - deploy
+
+variables:
+  CONTAINER_RELEASE_IMAGE_LANDING: $CI_REGISTRY_IMAGE_LANDING:latest
+
+
+frontend_lint:
+  image: node:lts-alpine3.20
+  stage: lint
+  rules:
+    - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
+      allow_failure: false
+  script:
+    - npm install
+    - npm run lint
+    - npx tsc --noEmit
+  artifacts:
+    paths:
+      - build/
+
+frontend_build:
+  image: node:lts-alpine3.20
+  stage: build
+  needs: []
+  rules:
+    - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
+      allow_failure: false
+  script:
+    - npm install
+    - npx tsc
+
+frontend_release-image:
+  image: docker:20.10.16
+  services:
+    - docker:20.10.16-dind
+  stage: release
+  before_script:
+    - echo "Logging into Docker hub..."
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD
+  only:
+    - staging
+  script:
+    #- IMAGE_TAG=$(echo "$CI_COMMIT_TIMESTAMP" | sed 's/:/-/g' | sed 's/+/-/g')
+    - IMAGE_TAG=${CI_COMMIT_SHORT_SHA}-$(echo "$CI_COMMIT_TIMESTAMP" | sed 's/:/-/g' | sed 's/+/-/g')
+    - CONTAINER_TEST_IMAGE_CLIENTSIDE="$CI_REGISTRY_IMAGE_LANDING:$IMAGE_TAG"
+    - echo "Building Docker image..."
+    - docker build --pull -t "$CONTAINER_TEST_IMAGE_LANDING" .
+    - docker push $CONTAINER_TEST_IMAGE_LANDING
+    - docker tag $CONTAINER_TEST_IMAGE_LANDING $CONTAINER_RELEASE_IMAGE_LANDING
+    - echo "Pushing Docker image to Docker hub......"
+    - docker push $CONTAINER_RELEASE_IMAGE_LANDING
+
+deploy:
+  image: alpine
+  stage: deploy
+  when: manual
+  before_script:
+    - apk update
+    - apk add --no-cache openssh
+  script:
+    #- IMAGE_TAG=$(echo "$CI_COMMIT_TIMESTAMP" | sed 's/:/-/g' | sed 's/+/-/g')
+    - IMAGE_TAG=${CI_COMMIT_SHORT_SHA}-$(echo "$CI_COMMIT_TIMESTAMP" | sed 's/:/-/g' | sed 's/+/-/g')
+    - echo "Deploying to prod ..."
+    - mkdir -p ~/.ssh
+    - echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+    - chmod 600 ~/.ssh/id_rsa
+    - ssh -o StrictHostKeyChecking=no $VM_USER@$VM_IP "IMAGE_TAG=$IMAGE_TAG ./deploy-landing.sh"
