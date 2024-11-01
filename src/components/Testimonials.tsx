@@ -71,7 +71,7 @@ export const Testimonials = () => {
           {" "}
           People Love{" "}
         </span>
-        This Landing Page
+        Interv
       </h2>
 
       <p className="text-xl text-muted-foreground pt-4 pb-8">
