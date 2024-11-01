@@ -27,48 +27,48 @@ interface PricingProps {
 
 const pricingList: PricingProps[] = [
   {
-    title: "Free",
+    title: "Standard",
     popular: 0,
-    price: 0,
+    price: 10,
     description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Get Started",
+      "Best for personal use",
+    buttonText: "Contact Us",
     benefitList: [
-      "1 Team member",
-      "2 GB Storage",
-      "Upto 4 pages",
+      "3 workspaces",
+      "30 stock questions",
+      "100 applicants",
+      "30 minutes recording time limit",
       "Community support",
-      "lorem ipsum dolor",
     ],
   },
   {
     title: "Premium",
     popular: 1,
-    price: 5,
+    price: 29,
     description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Start Free Trial",
+      "Best for small companies",
+    buttonText: "Contact Us",
     benefitList: [
-      "4 Team member",
-      "4 GB Storage",
-      "Upto 6 pages",
+      "10 workspaces",
+      "100 stock questions",
+      "300 applicants",
+      "1 hour recording time limit",
       "Priority support",
-      "lorem ipsum dolor",
     ],
   },
   {
     title: "Enterprise",
     popular: 0,
-    price: 40,
+    price: 80,
     description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Contact US",
+      "Best for large companies",
+    buttonText: "Contact Us",
     benefitList: [
-      "10 Team member",
-      "8 GB Storage",
-      "Upto 10 pages",
+      "Unlimited workspaces",
+      "Unlimited questions",
+      "Unlimited applicants",
+      "Unlimited recording time",
       "Priority support",
-      "lorem ipsum dolor",
     ],
   },
 ];
@@ -94,7 +94,7 @@ export const Pricing = () => {
         {pricingList.map((pricing: PricingProps) => (
           <Card
             key={pricing.title}
-            className={cn("w-full md:w-[300px] lg:w-auto",
+            className={cn("w-full md:w-[300px] lg:w-[500px]",
                 pricing.popular === PopularPlanType.YES
                 ? "drop-shadow-xl shadow-black/10 dark:shadow-white/10"
                 : ""

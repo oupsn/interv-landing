@@ -9,24 +9,27 @@ import {
 } from "@/components/ui/card";
 import {Facebook, Github, Instagram, Linkedin} from "lucide-react";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar.tsx";
+import p1 from "@/assets/p1.png";
+import p2 from "@/assets/p2.png";
+import p3 from "@/assets/p3.png";
 
 interface TeamProps {
-  imageUrl: string;
+  image: string;
   name: string;
   shortName: string;
   position: string;
   caption: string;
-  socialNetworks: SociaNetworkslProps[];
+  socialNetworks: SocialNetworksProps[];
 }
 
-interface SociaNetworkslProps {
+interface SocialNetworksProps {
   name: string;
   url: string;
 }
 
 const teamList: TeamProps[] = [
   {
-    imageUrl: "src/assets/p1.png",
+    image: p1,
     name: "Phawit Monchaising",
     shortName: "PM",
     position: "Fullstack Developer",
@@ -43,7 +46,7 @@ const teamList: TeamProps[] = [
     ],
   },
   {
-    imageUrl: "src/assets/p2.png",
+    image: p2,
     name: "Phatdanai Shinpanjapol",
     shortName: "PS",
     position: "Fullstack Developer",
@@ -60,7 +63,7 @@ const teamList: TeamProps[] = [
     ],
   },
   {
-    imageUrl: "src/assets/p3.png",
+    image: p3,
     name: "Pasinun Wittayawinit",
     shortName: "PW",
     position: "Fullstack Developer",
@@ -114,14 +117,14 @@ export const Team = () => {
 
       <div className="flex gap-10 gap-y-10 justify-center flex-wrap">
         {teamList.map(
-          ({ imageUrl, name, position, socialNetworks, shortName, caption }: TeamProps) => (
+          ({ image, name, position, socialNetworks, shortName, caption }: TeamProps) => (
             <Card
               key={name}
               className="bg-muted/50 relative mt-8 flex flex-col justify-center items-center w-[400px]"
             >
               <CardHeader className="mt-8 flex justify-center items-center pb-2">
                 <Avatar className="absolute -top-12 rounded-full w-24 h-24 aspect-square object-cover">
-                  <AvatarImage src={imageUrl} alt="Avatar" />
+                  <AvatarImage src={image} alt="Avatar" />
                   <AvatarFallback className="bg-transparent">
                     <Button
                         variant="outline"
@@ -143,7 +146,7 @@ export const Team = () => {
               </CardContent>
 
               <CardFooter>
-                {socialNetworks.map(({ name, url }: SociaNetworkslProps) => (
+                {socialNetworks.map(({ name, url }: SocialNetworksProps) => (
                   <div key={name}>
                     <a
                       rel="noreferrer noopener"
