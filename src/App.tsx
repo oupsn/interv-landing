@@ -8,28 +8,30 @@ import { ScrollToTop } from "./components/ScrollToTop";
 import { Team } from "./components/Team";
 import landing from "/public/landing.png";
 import "./App.css";
+import {Contact} from "@/components/Contact.tsx";
 
 function App() {
-  return (
-    <>
-      <img src={landing} alt={"landing"} className={"hidden"}/>
-      <Navbar />
-      <Hero />
-      {/*<Sponsors />*/}
-      <About />
-      <HowItWorks />
-      {/*<Features />*/}
-      {/*<Services />*/}
-      {/*<Cta />*/}
-      {/*<Testimonials />*/}
-      <Pricing />
-      <Team />
-      {/*<Newsletter />*/}
-      <FAQ />
-      {/*<Footer />*/}
-      <ScrollToTop />
-    </>
-  );
+    return (
+        <>
+            <img src={landing} alt={"landing"} className={"hidden"}/>
+            <Navbar/>
+            <Hero/>
+            {/*<Sponsors />*/}
+            <About/>
+            <HowItWorks/>
+            {/*<Features />*/}
+            {/*<Services />*/}
+            {/*<Cta />*/}
+            {/*<Testimonials />*/}
+            <Pricing/>
+            <Contact/>
+            <Team/>
+            {/*<Newsletter />*/}
+            <FAQ/>
+            {/*<Footer />*/}
+            <ScrollToTop/>
+        </>
+    );
 }
 
 export default App;

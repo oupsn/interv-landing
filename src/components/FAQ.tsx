@@ -25,22 +25,31 @@ const FAQList: FAQProps[] = [
   },
   {
     question:
-      "How secure is the data on Interv?",
+      "What types of interviews does Interv support?",
     answer:
-      "Security is a top priority. All interviews, code submissions, and recordings are encrypted, ensuring that candidate data is kept private and secure.",
+      "Interv supports coding interviews that measure code quality, style consistency, and technical skill. It also includes video-based interviews, allowing candidates to record video responses.",
     value: "item-3",
-  },
-  {
-    question: "Lorem ipsum dolor sit amet, consectetur adipisicing elit?",
-    answer: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-    value: "item-4",
   },
   {
     question:
       "How do I schedule an interview on Interv?",
     answer:
       "You can schedule an interview directly through the Interv platform by selecting the desired date and time, inviting participants, and setting the interview type (video or coding). Both interviewers and candidates will receive the invitation via email.",
+    value: "item-4",
+  },
+  {
+    question:
+        "Can I view a candidate’s coding quality in detail?",
+    answer:
+        "Yes, Interv’s coding interviews includes code quality measurement, highlighting stylistic errors and consistency checks to help evaluate a candidate's coding abilities.",
     value: "item-5",
+  },
+  {
+    question:
+        "Can I customize the assessments?",
+    answer:
+        "Yes, employers can tailor interviews to meet specific technical skill requirements, ensuring that interviews align with job roles.",
+    value: "item-6",
   },
 ];
 
@@ -83,7 +92,7 @@ export const FAQ = () => {
           href="mailto:help@interv.cc"
           className="text-primary transition-all border-primary hover:border-b-2"
         >
-          help@interv.cc
+          join@interv.cc
         </a>
       </h3>
     </section>

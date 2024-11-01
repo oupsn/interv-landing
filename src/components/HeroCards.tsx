@@ -11,6 +11,8 @@ import {
 } from "@/components/ui/card";
 import { Check } from "lucide-react";
 import { LightBulbIcon } from "./Icons";
+import c1 from "@/assets/c1.png"
+import c2 from "@/assets/c2.png"
 
 export const HeroCards = () => {
   return (
@@ -20,15 +22,14 @@ export const HeroCards = () => {
         <CardHeader className="flex flex-row items-center gap-4 pb-2">
           <Avatar>
             <AvatarImage
-              alt="chet"
-              src="src/assets/c1.png"
+              alt="neil"
+              src={c1}
             />
             <AvatarFallback>SH</AvatarFallback>
           </Avatar>
-
           <div className="flex flex-col">
-            <CardTitle className="text-lg">Clamon Neil</CardTitle>
-            <CardDescription>@clamon.neil</CardDescription>
+            <CardTitle className="text-lg -mt-2">Clamon Neil</CardTitle>
+            <CardDescription className={"-mt-1"}>@clamon.neil</CardDescription>
           </div>
         </CardHeader>
 
@@ -39,8 +40,8 @@ export const HeroCards = () => {
       <Card className="absolute right-[20px] top-4 w-80 flex flex-col justify-center items-center drop-shadow-xl shadow-black/10 dark:shadow-white/10">
         <CardHeader className="mt-8 flex justify-center items-center pb-2">
           <img
-            src="src/assets/c2.png"
-            alt="user avatar"
+            src={c2}
+            alt="Leo"
             className="absolute grayscale-[0%] -top-12 rounded-full w-24 h-24 aspect-square object-cover"
           />
           <CardTitle className="text-center">Leo Miranda</CardTitle>
@@ -60,7 +61,7 @@ export const HeroCards = () => {
       <Card className="absolute top-[150px] left-[50px] w-72  drop-shadow-xl shadow-black/10 dark:shadow-white/10">
         <CardHeader>
           <CardTitle className="flex item-center justify-between">
-            Free
+            Premium
             <Badge
               variant="secondary"
               className="text-sm text-primary"
@@ -69,24 +70,24 @@ export const HeroCards = () => {
             </Badge>
           </CardTitle>
           <div>
-            <span className="text-3xl font-bold">$0</span>
+            <span className="text-3xl font-bold">$29</span>
             <span className="text-muted-foreground"> /month</span>
           </div>
 
           <CardDescription>
-            Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.
+            Best for small companies
           </CardDescription>
         </CardHeader>
 
         <CardContent>
-          <Button className="w-full">Start Free Trial</Button>
+          <Button className="w-full">Contact us</Button>
         </CardContent>
 
         <hr className="w-4/5 m-auto mb-4" />
 
         <CardFooter className="flex">
           <div className="space-y-4">
-            {["4 Team member", "4 GB Storage", "Upto 6 pages"].map(
+            {["Unlimited workspaces", "Unlimited questions", "Priority support"].map(
               (benefit: string) => (
                 <span
                   key={benefit}
