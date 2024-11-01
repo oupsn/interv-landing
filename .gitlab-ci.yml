@@ -57,6 +57,8 @@ frontend_release-image:
 deploy:
   image: alpine
   stage: deploy
+  only:
+    - main
   when: manual
   before_script:
     - apk update
