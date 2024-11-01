@@ -59,7 +59,6 @@ deploy:
   stage: deploy
   only:
     - main
-  when: manual
   before_script:
     - apk update
     - apk add --no-cache openssh
