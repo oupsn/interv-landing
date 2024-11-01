@@ -1,4 +1,4 @@
-import { buttonVariants } from "@/components/ui/button";
+import {Button, buttonVariants} from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -7,12 +7,15 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Facebook, Instagram, Linkedin } from "lucide-react";
+import {Facebook, Github, Instagram, Linkedin} from "lucide-react";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar.tsx";
 
 interface TeamProps {
   imageUrl: string;
   name: string;
+  shortName: string;
   position: string;
+  caption: string;
   socialNetworks: SociaNetworkslProps[];
 }
 
@@ -23,71 +26,54 @@ interface SociaNetworkslProps {
 
 const teamList: TeamProps[] = [
   {
-    imageUrl: "https://i.pravatar.cc/150?img=35",
-    name: "Emma Smith",
-    position: "Product Manager",
+    imageUrl: "",
+    name: "Phawit Monchaising",
+    shortName: "PM",
+    position: "Fullstack Developer",
+    caption: "Loves writing code so concise, it’s practically poetry. Believes in clean code, clean desks, and clean coffee cups… but only after the fifth refill.",
     socialNetworks: [
       {
         name: "Linkedin",
-        url: "https://www.linkedin.com/in/leopoldo-miranda/",
+        url: "https://www.linkedin.com/in/phawit-monchaising/",
       },
       {
-        name: "Facebook",
-        url: "https://www.facebook.com/",
-      },
-      {
-        name: "Instagram",
-        url: "https://www.instagram.com/",
+        name: "Github",
+        url: "https://github.com/phawitpp",
       },
     ],
   },
   {
-    imageUrl: "https://i.pravatar.cc/150?img=60",
-    name: "John Doe",
-    position: "Tech Lead",
+    imageUrl: "",
+    name: "Phatdanai Shinpanjapol",
+    shortName: "PS",
+    position: "Fullstack Developer",
+    caption: "With a sixth sense for finding bugs, this developer can stare at a screen until bugs confess themselves. Side effects may include an intense relationship with a coffee mug.",
     socialNetworks: [
       {
         name: "Linkedin",
-        url: "https://www.linkedin.com/in/leopoldo-miranda/",
+        url: "https://www.linkedin.com/in/ps-shin/",
       },
       {
-        name: "Facebook",
-        url: "https://www.facebook.com/",
-      },
-      {
-        name: "Instagram",
-        url: "https://www.instagram.com/",
+        name: "Github",
+        url: "https://github.com/PS-safe",
       },
     ],
   },
   {
-    imageUrl: "https://i.pravatar.cc/150?img=36",
-    name: "Ashley Ross",
-    position: "Frontend Developer",
+    imageUrl: "",
+    name: "Pasinun Wittayawinit",
+    shortName: "PW",
+    position: "Fullstack Developer",
+    caption: "Always planning five projects ahead – and possibly the next snack. When not building rock-solid apps, this one’s probably reorganizing the desk… again.",
     socialNetworks: [
       {
         name: "Linkedin",
-        url: "https://www.linkedin.com/in/leopoldo-miranda/",
+        url: "https://www.linkedin.com/in/oupsn/",
       },
 
       {
-        name: "Instagram",
-        url: "https://www.instagram.com/",
-      },
-    ],
-  },
-  {
-    imageUrl: "https://i.pravatar.cc/150?img=17",
-    name: "Bruce Rogers",
-    position: "Backend Developer",
-    socialNetworks: [
-      {
-        name: "Linkedin",
-        url: "https://www.linkedin.com/in/leopoldo-miranda/",
-      },
-      {
-        name: "Facebook",
-        url: "https://www.facebook.com/",
+        name: "Github",
+        url: "https://github.com/oupsn",
       },
     ],
   },
@@ -104,6 +90,9 @@ export const Team = () => {
 
       case "Instagram":
         return <Instagram size="20" />;
+
+      case "Github":
+        return <Github size="20" />;
     }
   };
 
@@ -120,23 +109,29 @@ export const Team = () => {
       </h2>
 
       <p className="mt-4 mb-10 text-xl text-muted-foreground">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis
-        dolor pariatur sit!
+
       </p>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 gap-y-10">
+      <div className="flex gap-10 gap-y-10 justify-center flex-wrap">
         {teamList.map(
-          ({ imageUrl, name, position, socialNetworks }: TeamProps) => (
+          ({ imageUrl, name, position, socialNetworks, shortName, caption }: TeamProps) => (
             <Card
               key={name}
-              className="bg-muted/50 relative mt-8 flex flex-col justify-center items-center"
+              className="bg-muted/50 relative mt-8 flex flex-col justify-center items-center w-[400px]"
             >
               <CardHeader className="mt-8 flex justify-center items-center pb-2">
-                <img
-                  src={imageUrl}
-                  alt={`${name} ${position}`}
-                  className="absolute -top-12 rounded-full w-24 h-24 aspect-square object-cover"
-                />
+                <Avatar className="absolute -top-12 rounded-full w-24 h-24 aspect-square object-cover">
+                  <AvatarImage src={imageUrl} alt="Avatar" />
+                  <AvatarFallback className="bg-transparent">
+                    <Button
+                        variant="outline"
+                        className="relative w-24 h-24 rounded-full text-xl"
+                    >
+                      {shortName}
+                    </Button>
+
+                  </AvatarFallback>
+                </Avatar>
                 <CardTitle className="text-center">{name}</CardTitle>
                 <CardDescription className="text-primary">
                   {position}
@@ -144,7 +139,7 @@ export const Team = () => {
               </CardHeader>
 
               <CardContent className="text-center pb-2">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                {caption}
               </CardContent>
 
               <CardFooter>

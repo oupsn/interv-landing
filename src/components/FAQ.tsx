@@ -13,21 +13,21 @@ interface FAQProps {
 
 const FAQList: FAQProps[] = [
   {
-    question: "Is this template free?",
-    answer: "Yes. It is a free ChadcnUI template.",
+    question: "What is Interv, and how does it work?",
+    answer: "Interv is a platform designed for conducting video and coding interviews. It combines video conferencing with an integrated coding environment, enabling interviewers to assess both technical and communication skills in real time.",
     value: "item-1",
   },
   {
-    question: "Lorem ipsum dolor sit amet consectetur adipisicing elit?",
+    question: "Is Interv suitable for both technical and non-technical roles?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint labore quidem quam? Consectetur sapiente iste rerum reiciendis animi nihil nostrum sit quo, modi quod.",
+      "Absolutely. While Interv is optimized for technical interviews, its video and question-based formats make it ideal for evaluating candidates for a wide range of positions.",
     value: "item-2",
   },
   {
     question:
-      "Lorem ipsum dolor sit amet  Consectetur natus dolores minus quibusdam?",
+      "How secure is the data on Interv?",
     answer:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore qui nostrum reiciendis veritatis necessitatibus maxime quis ipsa vitae cumque quo?",
+      "Security is a top priority. All interviews, code submissions, and recordings are encrypted, ensuring that candidate data is kept private and secure.",
     value: "item-3",
   },
   {
@@ -37,9 +37,9 @@ const FAQList: FAQProps[] = [
   },
   {
     question:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur natus?",
+      "How do I schedule an interview on Interv?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint labore quidem quam? Consectetur sapiente iste rerum reiciendis animi nihil nostrum sit quo, modi quod.",
+      "You can schedule an interview directly through the Interv platform by selecting the desired date and time, inviting participants, and setting the interview type (video or coding). Both interviewers and candidates will receive the invitation via email.",
     value: "item-5",
   },
 ];
@@ -77,13 +77,13 @@ export const FAQ = () => {
       </Accordion>
 
       <h3 className="font-medium mt-4">
-        Still have questions?{" "}
+        Still have questions? Contact us via email {" "}
         <a
           rel="noreferrer noopener"
-          href="#"
+          href="mailto:help@interv.cc"
           className="text-primary transition-all border-primary hover:border-b-2"
         >
-          Contact us
+          help@interv.cc
         </a>
       </h3>
     </section>
