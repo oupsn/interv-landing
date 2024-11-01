@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
-import { MedalIcon, MapIcon, PlaneIcon, GiftIcon } from "../components/Icons";
+import {Eye, Mail, Settings2, Speech} from "lucide-react";
 
 interface FeatureProps {
   icon: JSX.Element;
@@ -9,28 +9,28 @@ interface FeatureProps {
 
 const features: FeatureProps[] = [
   {
-    icon: <MedalIcon />,
-    title: "Accessibility",
+    icon: <Settings2 size={"60px"} color={"#329B92"} />,
+    title: "Setup",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
+      "Create a dedicated workspace for your batch of applicants. This is where you’ll organize your interviews and manage all related activities.",
   },
   {
-    icon: <MapIcon />,
-    title: "Community",
+    icon: <Mail size={"60px"} color={"#329B92"} />,
+    title: "Invite",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
+      "Invite your applicants via email. This allows them to access the platform and working on their interviews.",
   },
   {
-    icon: <PlaneIcon />,
-    title: "Scalability",
+    icon: <Speech size={"60px"} color={"#329B92"} />,
+    title: "Interview",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
+      "Conduct video and coding interviews with your applicants. Utilize the platform’s tools to evaluate their skills and performance.",
   },
   {
-    icon: <GiftIcon />,
-    title: "Gamification",
+    icon: <Eye size={"60px"} color={"#329B92"} />,
+    title: "Review",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
+      "After the interviews, review the results and feedback. Analyze performance metrics to make informed decisions about your candidates.",
   },
 ];
 
@@ -48,8 +48,7 @@ export const HowItWorks = () => {
         Step-by-Step Guide
       </h2>
       <p className="md:w-3/4 mx-auto mt-4 mb-8 text-xl text-muted-foreground">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis
-        dolor pariatur sit!
+        Streamline your interview process with Interv, from beginning to end.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
