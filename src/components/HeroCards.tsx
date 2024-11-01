@@ -58,7 +58,7 @@ export const HeroCards = () => {
       </Card>
 
       {/* Pricing */}
-      <Card className="absolute top-[150px] left-[50px] w-72  drop-shadow-xl shadow-black/10 dark:shadow-white/10">
+      <Card className="absolute top-[140px] left-[50px] w-72  drop-shadow-xl shadow-black/10 dark:shadow-white/10">
         <CardHeader>
           <CardTitle className="flex item-center justify-between">
             Premium
@@ -70,7 +70,7 @@ export const HeroCards = () => {
             </Badge>
           </CardTitle>
           <div>
-            <span className="text-3xl font-bold">$29</span>
+            <span className="text-3xl font-bold">$29.99</span>
             <span className="text-muted-foreground"> /month</span>
           </div>
 
@@ -87,7 +87,7 @@ export const HeroCards = () => {
 
         <CardFooter className="flex">
           <div className="space-y-4">
-            {["Unlimited workspaces", "Unlimited questions", "Priority support"].map(
+            {["10 workspaces", "100 stock questions", "300 applicants", "Priority support"].map(
               (benefit: string) => (
                 <span
                   key={benefit}
