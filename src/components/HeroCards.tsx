@@ -103,13 +103,13 @@ export const HeroCards = () => {
       </Card>
 
       {/* Service */}
-      <Card className="absolute w-[350px] -right-[10px] bottom-[30px]  drop-shadow-xl shadow-black/10 dark:shadow-white/10">
+      <Card className="absolute w-[360px] -right-[20px] bottom-[30px]  drop-shadow-xl shadow-black/10 dark:shadow-white/10">
         <CardHeader className="space-y-1 flex md:flex-row justify-start items-start gap-4">
           <div className="mt-1 bg-primary/20 p-1 rounded-2xl">
             <LightBulbIcon />
           </div>
           <div>
-            <CardTitle>Efficient Hiring</CardTitle>
+            <CardTitle>Efficient Recruitment</CardTitle>
             <CardDescription className="text-md mt-2">
               Streamline your interview process and reduce time-to-hire with our intuitive tools designed for fast and effective.
             </CardDescription>

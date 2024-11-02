@@ -14,20 +14,20 @@ interface FAQProps {
 const FAQList: FAQProps[] = [
   {
     question: "What is Interv, and how does it work?",
-    answer: "Interv is a platform designed for conducting video and coding interviews. It combines video conferencing with an integrated coding environment, enabling interviewers to assess both technical and communication skills in real time.",
+    answer: "Interv is a platform designed for conducting video and coding interviews. It combines video conferencing with an integrated coding environment, enabling interviewers to assess both technical and communication skills.",
     value: "item-1",
   },
   {
     question: "Is Interv suitable for both technical and non-technical roles?",
     answer:
-      "Absolutely. While Interv is optimized for technical interviews, its video and question-based formats make it ideal for evaluating candidates for a wide range of positions.",
+      "Absolutely. While Interv is optimized for technical interviews (coding), its video and question-based formats make it ideal for evaluating candidates for a wide range of positions.",
     value: "item-2",
   },
   {
     question:
       "What types of interviews does Interv support?",
     answer:
-      "Interv supports coding interviews that measure code quality, style consistency, and technical skill. It also includes video-based interviews, allowing candidates to record video responses.",
+      "Interv supports coding interviews that measure code quality, and technical skill. It also includes video-based interviews, allowing candidates to record video responses.",
     value: "item-3",
   },
   {
@@ -46,7 +46,7 @@ const FAQList: FAQProps[] = [
   },
   {
     question:
-        "Can I customize the assessments?",
+        "Can I customize the interviews?",
     answer:
         "Yes, employers can tailor interviews to meet specific technical skill requirements, ensuring that interviews align with job roles.",
     value: "item-6",

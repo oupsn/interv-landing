@@ -49,7 +49,8 @@ export const Navbar = () => {
               href="/"
               className="ml-2 font-bold text-xl flex"
             >
-              <img src={'https://interv.cc/assets/interv-logo-B0rTANdX.png'} className={"w-[100px] -mt-2"} alt={'interv logo'}/>
+              <img src={'https://interv.cc/assets/interv-logo-B0rTANdX.png'} className={"w-[100px] -mt-2 dark:hidden"} alt={'interv logo'}/>
+              <p className={"text-3xl hidden dark:inline"}>Interv</p>
             </a>
           </NavigationMenuItem>
 

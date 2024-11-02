@@ -22,7 +22,7 @@ export const About = () => {
                 </span>
               </h2>
               <p className="text-xl text-muted-foreground mt-4">
-                Interv is a next-gen platform for video and coding interviews, designed to simplify the hiring process. With tools for coding, video recording, and feedback, Interv helps hiring teams quickly assess both technical and soft skills, ensuring better hiring decisions. Our intuitive platform saves time, reduces bias, and enhances candidate experience, making it the ideal choice for companies of all sizes.
+                Interv is a next-gen platform for video and coding interviews, designed to simplify the recruitment process. With tools for coding, video recording, and applicants managing, Interv helps hiring teams quickly assess both technical and soft skills, ensuring better hiring decisions. Our intuitive platform saves time, reduces bias, and enhances candidate experience, making it the ideal choice for companies of all sizes.
               </p>
             </div>
 

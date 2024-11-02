@@ -30,7 +30,7 @@ const features: FeatureProps[] = [
     icon: <Eye size={"60px"} color={"#329B92"} />,
     title: "Review",
     description:
-      "After the interviews, review the results and feedback. Analyze performance metrics to make informed decisions about your candidates.",
+      "After the interviews, review the results with the analyzed performance metrics to make informed decisions about your candidates.",
   },
 ];
 

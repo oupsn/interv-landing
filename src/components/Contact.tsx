@@ -16,10 +16,10 @@ const formSchema = z.object({
         message: "Lastname must be at least 2 characters.",
     }),
     email: z.string().email(),
-    company: z.string().min(2, {
-        message: "Company name must be at least 2 characters.",
+    company: z.string(),
+    phone: coerce.string().refine(value => value.length === 10, {
+        message: "Phone number must be 10 characters long."
     }),
-    phone: coerce.string(),
     note: z.string()
 })
 
@@ -108,7 +108,7 @@ export const Contact = () => {
                                     name="company"
                                     render={({field}) => (
                                         <FormItem>
-                                            <FormLabel className={"text-lg"}>Company Name</FormLabel>
+                                            <FormLabel className={"text-lg"}>Company name (optional)</FormLabel>
                                             <FormControl>
                                                 <Input {...field} />
                                             </FormControl>
@@ -134,7 +134,7 @@ export const Contact = () => {
                                     name="note"
                                     render={({field}) => (
                                         <FormItem>
-                                            <FormLabel className={"text-lg"}>Note</FormLabel>
+                                            <FormLabel className={"text-lg"}>Note (optional)</FormLabel>
                                             <FormControl>
                                                 <Input {...field} />
                                             </FormControl>
