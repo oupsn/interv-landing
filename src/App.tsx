@@ -6,7 +6,7 @@ import { Navbar } from "./components/Navbar";
 import { Pricing } from "./components/Pricing";
 import { ScrollToTop } from "./components/ScrollToTop";
 import { Team } from "./components/Team";
-import landing from "/public/landing.png";
+import landing from "/src/assets/landing.png";
 import "./App.css";
 import {Contact} from "@/components/Contact.tsx";
 
