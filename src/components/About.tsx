@@ -1,4 +1,4 @@
-import pilot from "../assets/pilot.png";
+import floating from "../assets/floating.png"
 
 export const About = () => {
   return (
@@ -9,9 +9,9 @@ export const About = () => {
       <div className="bg-muted/50 border rounded-lg py-12">
         <div className="px-6 flex flex-col-reverse md:flex-row gap-8 md:gap-12">
           <img
-            src={pilot}
-            alt=""
-            className="w-[300px] object-contain rounded-lg"
+            src={floating}
+            alt="flaoting"
+            className="w-[250px] object-contain rounded-lg"
           />
           <div className="bg-green-0 flex flex-col justify-center">
             <div className="pb-6">
@@ -22,7 +22,7 @@ export const About = () => {
                 </span>
               </h2>
               <p className="text-xl text-muted-foreground mt-4">
-                Interv is a next-gen platform for video and coding interviews, designed to simplify the recruitment process. With tools for coding, video recording, and applicants managing, Interv helps hiring teams quickly assess both technical and soft skills, ensuring better hiring decisions. Our intuitive platform saves time, reduces bias, and enhances candidate experience, making it the ideal choice for companies of all sizes.
+                Interv is a streamlined platform for video and coding interviews, designed to simplify the recruitment process. With tools for coding, video recording, and applicants managing, Interv helps hiring teams quickly assess both technical and soft skills, ensuring better hiring decisions. Our intuitive platform saves time, reduces bias, and enhances candidate experience, making it the ideal choice for companies of all sizes.
               </p>
             </div>
 
