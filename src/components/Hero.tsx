@@ -16,7 +16,7 @@ export const Hero = () => {
           </h2>
         </main>
 
-        <p className="text-xl text-muted-foreground 2xl:w-10/12 mx-auto lg:mx-0">
+        <p className="text-xl text-muted-foreground  mx-auto lg:mx-0">
           Take your interview process to the next level.
           <br/>
           Elevate candidate experience and streamline decision-making.
