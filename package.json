@@ -1,7 +1,6 @@
 {
   "name": "interv-landing",
   "description": "Landing page for interv.cc",
-  "license": "MIT",
   "private": true,
   "version": "1.1.0",
   "type": "module",
